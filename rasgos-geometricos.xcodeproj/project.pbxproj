@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A37D0EF1A7873EF003EF922 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A37D0EE1A7873EF003EF922 /* AppDelegate.swift */; };
+		4A37D0F11A7873EF003EF922 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A37D0F01A7873EF003EF922 /* ViewController.swift */; };
+		4A37D0F41A7873EF003EF922 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A37D0F21A7873EF003EF922 /* Main.storyboard */; };
+		4A37D0F61A7873EF003EF922 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A37D0F51A7873EF003EF922 /* Images.xcassets */; };
+		4A37D0F91A7873EF003EF922 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A37D0F71A7873EF003EF922 /* LaunchScreen.xib */; };
+		4A37D1051A7873F0003EF922 /* rasgos_geometricosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A37D1041A7873F0003EF922 /* rasgos_geometricosTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A37D0FF1A7873EF003EF922 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A37D0E11A7873EF003EF922 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A37D0E81A7873EF003EF922;
+			remoteInfo = "rasgos-geometricos";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4A37D0E91A7873EF003EF922 /* rasgos-geometricos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rasgos-geometricos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A37D0ED1A7873EF003EF922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A37D0EE1A7873EF003EF922 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A37D0F01A7873EF003EF922 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4A37D0F31A7873EF003EF922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4A37D0F51A7873EF003EF922 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4A37D0F81A7873EF003EF922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		4A37D0FE1A7873EF003EF922 /* rasgos-geometricosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rasgos-geometricosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A37D1031A7873F0003EF922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A37D1041A7873F0003EF922 /* rasgos_geometricosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rasgos_geometricosTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A37D0E61A7873EF003EF922 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A37D0FB1A7873EF003EF922 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A37D0E01A7873EF003EF922 = {
+			isa = PBXGroup;
+			children = (
+				4A37D0EB1A7873EF003EF922 /* rasgos-geometricos */,
+				4A37D1011A7873F0003EF922 /* rasgos-geometricosTests */,
+				4A37D0EA1A7873EF003EF922 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4A37D0EA1A7873EF003EF922 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A37D0E91A7873EF003EF922 /* rasgos-geometricos.app */,
+				4A37D0FE1A7873EF003EF922 /* rasgos-geometricosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A37D0EB1A7873EF003EF922 /* rasgos-geometricos */ = {
+			isa = PBXGroup;
+			children = (
+				4A37D0EE1A7873EF003EF922 /* AppDelegate.swift */,
+				4A37D0F01A7873EF003EF922 /* ViewController.swift */,
+				4A37D0F21A7873EF003EF922 /* Main.storyboard */,
+				4A37D0F51A7873EF003EF922 /* Images.xcassets */,
+				4A37D0F71A7873EF003EF922 /* LaunchScreen.xib */,
+				4A37D0EC1A7873EF003EF922 /* Supporting Files */,
+			);
+			path = "rasgos-geometricos";
+			sourceTree = "<group>";
+		};
+		4A37D0EC1A7873EF003EF922 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A37D0ED1A7873EF003EF922 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4A37D1011A7873F0003EF922 /* rasgos-geometricosTests */ = {
+			isa = PBXGroup;
+			children = (
+				4A37D1041A7873F0003EF922 /* rasgos_geometricosTests.swift */,
+				4A37D1021A7873F0003EF922 /* Supporting Files */,
+			);
+			path = "rasgos-geometricosTests";
+			sourceTree = "<group>";
+		};
+		4A37D1021A7873F0003EF922 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A37D1031A7873F0003EF922 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A37D0E81A7873EF003EF922 /* rasgos-geometricos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A37D1081A7873F0003EF922 /* Build configuration list for PBXNativeTarget "rasgos-geometricos" */;
+			buildPhases = (
+				4A37D0E51A7873EF003EF922 /* Sources */,
+				4A37D0E61A7873EF003EF922 /* Frameworks */,
+				4A37D0E71A7873EF003EF922 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "rasgos-geometricos";
+			productName = "rasgos-geometricos";
+			productReference = 4A37D0E91A7873EF003EF922 /* rasgos-geometricos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4A37D0FD1A7873EF003EF922 /* rasgos-geometricosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A37D10B1A7873F0003EF922 /* Build configuration list for PBXNativeTarget "rasgos-geometricosTests" */;
+			buildPhases = (
+				4A37D0FA1A7873EF003EF922 /* Sources */,
+				4A37D0FB1A7873EF003EF922 /* Frameworks */,
+				4A37D0FC1A7873EF003EF922 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A37D1001A7873EF003EF922 /* PBXTargetDependency */,
+			);
+			name = "rasgos-geometricosTests";
+			productName = "rasgos-geometricosTests";
+			productReference = 4A37D0FE1A7873EF003EF922 /* rasgos-geometricosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A37D0E11A7873EF003EF922 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Luis Flores";
+				TargetAttributes = {
+					4A37D0E81A7873EF003EF922 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					4A37D0FD1A7873EF003EF922 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 4A37D0E81A7873EF003EF922;
+					};
+				};
+			};
+			buildConfigurationList = 4A37D0E41A7873EF003EF922 /* Build configuration list for PBXProject "rasgos-geometricos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4A37D0E01A7873EF003EF922;
+			productRefGroup = 4A37D0EA1A7873EF003EF922 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A37D0E81A7873EF003EF922 /* rasgos-geometricos */,
+				4A37D0FD1A7873EF003EF922 /* rasgos-geometricosTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A37D0E71A7873EF003EF922 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A37D0F41A7873EF003EF922 /* Main.storyboard in Resources */,
+				4A37D0F91A7873EF003EF922 /* LaunchScreen.xib in Resources */,
+				4A37D0F61A7873EF003EF922 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A37D0FC1A7873EF003EF922 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A37D0E51A7873EF003EF922 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A37D0F11A7873EF003EF922 /* ViewController.swift in Sources */,
+				4A37D0EF1A7873EF003EF922 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A37D0FA1A7873EF003EF922 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A37D1051A7873F0003EF922 /* rasgos_geometricosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A37D1001A7873EF003EF922 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A37D0E81A7873EF003EF922 /* rasgos-geometricos */;
+			targetProxy = 4A37D0FF1A7873EF003EF922 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4A37D0F21A7873EF003EF922 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A37D0F31A7873EF003EF922 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4A37D0F71A7873EF003EF922 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A37D0F81A7873EF003EF922 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4A37D1061A7873F0003EF922 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4A37D1071A7873F0003EF922 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4A37D1091A7873F0003EF922 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "rasgos-geometricos/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4A37D10A1A7873F0003EF922 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "rasgos-geometricos/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4A37D10C1A7873F0003EF922 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "rasgos-geometricosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rasgos-geometricos.app/rasgos-geometricos";
+			};
+			name = Debug;
+		};
+		4A37D10D1A7873F0003EF922 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "rasgos-geometricosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rasgos-geometricos.app/rasgos-geometricos";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A37D0E41A7873EF003EF922 /* Build configuration list for PBXProject "rasgos-geometricos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A37D1061A7873F0003EF922 /* Debug */,
+				4A37D1071A7873F0003EF922 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A37D1081A7873F0003EF922 /* Build configuration list for PBXNativeTarget "rasgos-geometricos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A37D1091A7873F0003EF922 /* Debug */,
+				4A37D10A1A7873F0003EF922 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4A37D10B1A7873F0003EF922 /* Build configuration list for PBXNativeTarget "rasgos-geometricosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A37D10C1A7873F0003EF922 /* Debug */,
+				4A37D10D1A7873F0003EF922 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A37D0E11A7873EF003EF922 /* Project object */;
+}
