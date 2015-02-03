@@ -13,14 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        var grid: [[Int]] = [   [1, 0, 0, 0, 1],
-                                [0, 0, 0, 0, 0],
-                                [0, 0, 0, 0, 0],
-                                [0, 0, 0, 0, 1]
-                            ]
-
-        let floodFill = FloodFill(grid: grid)
-        print(floodFill.numberOfComponents())
+//        var grid: [[Int]] = [   [0, 0, 0, 0, 0],
+//                                [0, 1, 0, 0, 1],
+//                                [0, 0, 1, 1, 1],
+//                                [0, 1, 0, 1, 1]
+//                            ]
+//        Geometry.perimeter(grid, startPoint: Coordinate(x: 1, y: 1), endPoint: Coordinate(x: 4, y: 3))
     }
 }
 

@@ -20,7 +20,7 @@ class FloodFillTest: XCTestCase {
         ]
         
         var floodFill = FloodFill(grid: grid)
-        XCTAssert(floodFill.numberOfComponents() == 4, "4 componentes")
+        XCTAssert(floodFill.numberOfComponents() == 4, "4 components")
         
         grid = [
             [0, 0, 0, 0, 0],
@@ -30,7 +30,7 @@ class FloodFillTest: XCTestCase {
         ]
         
         floodFill = FloodFill(grid: grid)
-        XCTAssert(floodFill.numberOfComponents() == 0, "0 componentes")
+        XCTAssert(floodFill.numberOfComponents() == 0, "0 components")
         
         grid = [
             [1, 1, 1, 1, 1],
@@ -40,7 +40,17 @@ class FloodFillTest: XCTestCase {
         ]
         
         floodFill = FloodFill(grid: grid)
-        XCTAssert(floodFill.numberOfComponents() == 1, "1 componentes")
+        XCTAssert(floodFill.numberOfComponents() == 1, "1 components")
+        
+        grid = [
+            [1, 0, 0, 0, 1],
+            [0, 1, 0, 1, 0],
+            [0, 0, 1, 0, 0],
+            [0, 1, 0, 1, 0]
+        ]
+        
+        floodFill = FloodFill(grid: grid)
+        XCTAssert(floodFill.numberOfComponents() == 1, "1 components")
         
         grid = [
             [1, 1, 0, 1, 1],
@@ -50,9 +60,9 @@ class FloodFillTest: XCTestCase {
         ]
         
         floodFill = FloodFill(grid: grid)
-        XCTAssert(floodFill.numberOfComponents() == 2, "2 componentes")
-        // Ensure the same result
-        XCTAssert(floodFill.numberOfComponents() == 2, "2 componentes")
+        XCTAssert(floodFill.numberOfComponents() == 2, "2 components")
+        // Ensure is the same result
+        XCTAssert(floodFill.numberOfComponents() == 2, "2 components")
     }
     
     func testPerformanceFloodFill() {
@@ -65,7 +75,7 @@ class FloodFillTest: XCTestCase {
             ]
             
             let floodFill = FloodFill(grid: grid)
-            XCTAssert(floodFill.numberOfComponents() == 4, "4 componentes")
+            XCTAssert(floodFill.numberOfComponents() == 4, "4 components")
         }
     }
 }
