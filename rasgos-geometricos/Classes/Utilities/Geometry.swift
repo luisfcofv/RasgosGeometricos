@@ -27,8 +27,8 @@ class Geometry {
     
     class func contactPerimeter(grid: [[Int]]) -> Int {
         var contactPerimeter = 0
-        let pixelGrid = PixelGrid(grid: grid)
-        let pixels = pixelGrid.numberOfPixels()
+        let binaryObject = BinaryObject(grid: grid)
+        let pixels = binaryObject.numberOfActivePixels()
         let valuePerimeter = perimeter(grid)
         // PC = 2 * N - (P / 2)
         return (2 * pixels) - (valuePerimeter / 2)

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Coordinate {
+struct Coordinate : Printable {
     var x: Int = 0;
     var y: Int = 0;
     
@@ -16,4 +16,12 @@ struct Coordinate {
         self.x = x
         self.y = y
     }
+    
+    var description: String {
+        return "x:\(x) y:\(y)"
+    }
+}
+
+func ==(lhs: Coordinate, rhs: Coordinate) -> Bool {
+    return lhs.x == rhs.x && lhs.y == rhs.y;
 }
