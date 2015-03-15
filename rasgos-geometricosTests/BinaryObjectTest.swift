@@ -20,7 +20,7 @@ class BinaryObjectTest: XCTestCase {
         ]
         
         var binaryObject = BinaryObject(grid:grid)
-        XCTAssert(binaryObject.numberOfActivePixels() == 4, "4 pixels")
+        XCTAssert(binaryObject.activePixels == 4, "4 pixels")
         
         grid = [
             [0, 0, 0, 0, 0],
@@ -30,7 +30,7 @@ class BinaryObjectTest: XCTestCase {
         ]
         
         binaryObject = BinaryObject(grid:grid)
-        XCTAssert(binaryObject.numberOfActivePixels() == 0, "0 pixels")
+        XCTAssert(binaryObject.activePixels == 0, "0 pixels")
         
         grid = [
             [1, 1, 1, 1, 1],
@@ -40,7 +40,7 @@ class BinaryObjectTest: XCTestCase {
         ]
         
         binaryObject = BinaryObject(grid:grid)
-        XCTAssert(binaryObject.numberOfActivePixels() == 5*4, "20 pixels")
+        XCTAssert(binaryObject.activePixels == 5*4, "20 pixels")
         
         grid = [
             [1, 1, 0, 1, 1],
@@ -50,8 +50,69 @@ class BinaryObjectTest: XCTestCase {
         ]
         
         binaryObject = BinaryObject(grid:grid)
-        XCTAssert(binaryObject.numberOfActivePixels() == 16, "16 pixels")
+        XCTAssert(binaryObject.activePixels == 16, "16 pixels")
     }
+    
+    func testTetraPixels() {
+        var grid: [[Int]] = [
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1]
+        ]
+        
+        var binaryObject = BinaryObject(grid:grid)
+        XCTAssertTrue(binaryObject.isTetraPixel(Coordinate(x: 0, y: 0)))
+        XCTAssertTrue(binaryObject.isTetraPixel(Coordinate(x: 1, y: 0)))
+        XCTAssertTrue(binaryObject.isTetraPixel(Coordinate(x: 0, y: 1)))
+        XCTAssertTrue(binaryObject.isTetraPixel(Coordinate(x: 1, y: 1)))
+        
+        XCTAssert(binaryObject.tetraPixels == 4, "Tetrapixels = 4 -> \(binaryObject.tetraPixels)")
+        
+        grid = [
+            [1, 1, 1],
+            [1, 0, 1],
+            [1, 1, 1]
+        ]
+        
+        binaryObject = BinaryObject(grid:grid)
+        XCTAssertFalse(binaryObject.isTetraPixel(Coordinate(x: 0, y: 0)))
+        XCTAssertFalse(binaryObject.isTetraPixel(Coordinate(x: 1, y: 0)))
+        XCTAssertFalse(binaryObject.isTetraPixel(Coordinate(x: 0, y: 1)))
+        XCTAssertFalse(binaryObject.isTetraPixel(Coordinate(x: 1, y: 1)))
+        
+        XCTAssert(binaryObject.tetraPixels == 0, "Tetrapixels = 0 -> \(binaryObject.tetraPixels)")
+        
+        grid = [
+            [1, 1, 1, 1],
+            [1, 0, 1, 1],
+            [1, 0, 0, 1],
+            [1, 1, 1, 1]
+        ]
+        
+        binaryObject = BinaryObject(grid:grid)
+        XCTAssert(binaryObject.tetraPixels == 1, "Tetrapixels = 1 -> \(binaryObject.tetraPixels)")
+        
+        grid = [
+            [1, 1, 1, 1],
+            [1, 1, 0, 1],
+            [1, 0, 0, 1],
+            [1, 1, 1, 1]
+        ]
+        
+        binaryObject = BinaryObject(grid:grid)
+        XCTAssert(binaryObject.tetraPixels == 1, "Tetrapixels = 1 -> \(binaryObject.tetraPixels)")
+        
+        grid = [
+            [1, 1, 1, 0],
+            [1, 0, 1, 1],
+            [1, 0, 0, 1],
+            [1, 1, 1, 1]
+        ]
+        
+        binaryObject = BinaryObject(grid:grid)
+        XCTAssert(binaryObject.tetraPixels == 0, "Tetrapixels = 0 -> \(binaryObject.tetraPixels)")
+    }
+
     
     func testEdges() {
         var grid: [[Int]] = [
@@ -70,7 +131,7 @@ class BinaryObjectTest: XCTestCase {
         ]
         
         binaryObject = BinaryObject(grid:grid)
-        XCTAssert(binaryObject.edges == 24, "binaryObject.edges = 24 -> \(binaryObject.edges)")
+        XCTAssert(binaryObject.edges == 24, "Edges = 24 -> \(binaryObject.edges)")
         
         grid = [
             [1, 1, 1],
@@ -79,7 +140,7 @@ class BinaryObjectTest: XCTestCase {
         ]
         
         binaryObject = BinaryObject(grid:grid)
-        XCTAssert(binaryObject.edges == 22, "binaryObject.edges = 22 -> \(binaryObject.edges)")
+        XCTAssert(binaryObject.edges == 22, "Edges = 22 -> \(binaryObject.edges)")
         
         grid = [
             [1, 1, 1],
@@ -88,7 +149,7 @@ class BinaryObjectTest: XCTestCase {
         ]
         
         binaryObject = BinaryObject(grid:grid)
-        XCTAssert(binaryObject.edges == 16, "binaryObject.edges = 16 -> \(binaryObject.edges)")
+        XCTAssert(binaryObject.edges == 16, "Edges= 16 -> \(binaryObject.edges)")
         
         grid = [
             [1, 0, 1],
@@ -97,7 +158,45 @@ class BinaryObjectTest: XCTestCase {
         ]
         
         binaryObject = BinaryObject(grid:grid)
-        XCTAssert(binaryObject.edges == 20, "binaryObject.edges = 20 -> \(binaryObject.edges)")
+        XCTAssert(binaryObject.edges == 20, "Edges = 20 -> \(binaryObject.edges)")
+    }
+    
+    func testVertex() {
+        var grid: [[Int]] = [
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1]
+        ]
+        
+        var binaryObject = BinaryObject(grid:grid)
+        XCTAssert(binaryObject.vertex == 16, "Vertex = 16 -> \(binaryObject.vertex)")
+        
+        grid = [
+            [1, 1, 1],
+            [1, 0, 1],
+            [1, 1, 1]
+        ]
+        
+        binaryObject = BinaryObject(grid:grid)
+        XCTAssert(binaryObject.vertex == 16, "Vertex = 16 -> \(binaryObject.vertex)")
+        
+        grid = [
+            [1, 1, 1],
+            [0, 0, 1],
+            [1, 1, 1]
+        ]
+        
+        binaryObject = BinaryObject(grid:grid)
+        XCTAssert(binaryObject.vertex == 16, "Vertex = 16 -> \(binaryObject.vertex)")
+        
+        grid = [
+            [1, 1, 1],
+            [0, 0, 1],
+            [0, 0, 1]
+        ]
+        
+        binaryObject = BinaryObject(grid:grid)
+        XCTAssert(binaryObject.vertex == 12, "Vertex = 12 -> \(binaryObject.vertex)")
     }
     
     func testCenterOfMass() {
@@ -207,7 +306,7 @@ class BinaryObjectTest: XCTestCase {
         XCTAssert(binaryObject.contactPerimeter == 14, "PC = 14 -> \(binaryObject.contactPerimeter)")
     }
     
-    func testAdjacentSpaces() {
+    func testAdjacentPixels() {
         var grid: [[Int]] = [
             [1, 1, 1],
             [1, 0, 1],
@@ -215,31 +314,31 @@ class BinaryObjectTest: XCTestCase {
         ]
         
         var binaryObject = BinaryObject(grid:grid)
-        var sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 0, y: 0))
+        var sol = binaryObject.adjacentSpaces(Coordinate(x: 0, y: 0))
         XCTAssert(sol == 2, "2 Adjacent Pixels")
         
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 0, y: 1))
+        sol = binaryObject.adjacentSpaces(Coordinate(x: 0, y: 1))
         XCTAssert(sol == 2, "2 Adjacent Pixels")
         
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 0, y: 2))
+        sol = binaryObject.adjacentSpaces(Coordinate(x: 0, y: 2))
         XCTAssert(sol == 2, "2 Adjacent Pixels")
         
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 1, y: 0))
+        sol = binaryObject.adjacentSpaces(Coordinate(x: 1, y: 0))
         XCTAssert(sol == 2, "2 Adjacent Pixels")
         
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 1, y: 1))
+        sol = binaryObject.adjacentSpaces(Coordinate(x: 1, y: 1))
         XCTAssert(sol == 0, "0 Adjacent Pixels")
         
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 1, y: 2))
+        sol = binaryObject.adjacentSpaces(Coordinate(x: 1, y: 2))
         XCTAssert(sol == 2, "2 Adjacent Pixels")
         
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 2, y: 0))
+        sol = binaryObject.adjacentSpaces(Coordinate(x: 2, y: 0))
         XCTAssert(sol == 2, "2 Adjacent Pixels")
         
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 2, y: 1))
+        sol = binaryObject.adjacentSpaces(Coordinate(x: 2, y: 1))
         XCTAssert(sol == 2, "2 Adjacent Pixels")
         
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 2, y: 2))
+        sol = binaryObject.adjacentSpaces(Coordinate(x: 2, y: 2))
         XCTAssert(sol == 2, "2 Adjacent Pixels")
         
         
@@ -250,67 +349,31 @@ class BinaryObjectTest: XCTestCase {
         ]
         
         binaryObject = BinaryObject(grid:grid)
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 0, y: 0))
+        sol = binaryObject.adjacentSpaces(Coordinate(x: 0, y: 0))
         XCTAssert(sol == 2, "2 Adjacent Pixels")
         
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 0, y: 1))
-        XCTAssert(sol == 2, "1 Adjacent Pixels")
+        sol = binaryObject.adjacentSpaces(Coordinate(x: 0, y: 1))
+        XCTAssert(sol == 2, "2 Adjacent Pixels")
         
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 0, y: 2))
+        sol = binaryObject.adjacentSpaces(Coordinate(x: 0, y: 2))
         XCTAssert(sol == 0, "0 Adjacent Pixels")
         
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 1, y: 0))
+        sol = binaryObject.adjacentSpaces(Coordinate(x: 1, y: 0))
         XCTAssert(sol == 1, "1 Adjacent Pixels")
         
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 1, y: 1))
+        sol = binaryObject.adjacentSpaces(Coordinate(x: 1, y: 1))
         XCTAssert(sol == 0, "0 Adjacent Pixels")
         
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 1, y: 2))
+        sol = binaryObject.adjacentSpaces(Coordinate(x: 1, y: 2))
         XCTAssert(sol == 2, "2 Adjacent Pixels")
         
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 2, y: 0))
+        sol = binaryObject.adjacentSpaces(Coordinate(x: 2, y: 0))
         XCTAssert(sol == 2, "2 Adjacent Pixels")
         
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 2, y: 1))
+        sol = binaryObject.adjacentSpaces(Coordinate(x: 2, y: 1))
         XCTAssert(sol == 1, "1 Adjacent Pixels")
         
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 2, y: 2))
-        XCTAssert(sol == 2, "2 Adjacent Pixels")
-    }
-    
-    func testAdjacentPixels() {
-        var grid: [[Int]] = [
-            [1, 1, 1],
-            [1, 0, 1],
-            [1, 1, 1]
-        ]
-        
-        var binaryObject = BinaryObject(grid:grid)
-        var sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 0, y: 0))
-        XCTAssert(sol == 2, "2 Adjacent Pixels")
-        
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 0, y: 1))
-        XCTAssert(sol == 2, "2 Adjacent Pixels")
-        
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 0, y: 2))
-        XCTAssert(sol == 2, "2 Adjacent Pixels")
-        
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 1, y: 0))
-        XCTAssert(sol == 2, "2 Adjacent Pixels")
-        
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 1, y: 1))
-        XCTAssert(sol == 0, "0 Adjacent Pixels")
-        
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 1, y: 2))
-        XCTAssert(sol == 2, "2 Adjacent Pixels")
-        
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 2, y: 0))
-        XCTAssert(sol == 2, "2 Adjacent Pixels")
-        
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 2, y: 1))
-        XCTAssert(sol == 2, "2 Adjacent Pixels")
-        
-        sol = binaryObject.adjacentSpaces(grid, coordinate: Coordinate(x: 2, y: 2))
+        sol = binaryObject.adjacentSpaces(Coordinate(x: 2, y: 2))
         XCTAssert(sol == 2, "2 Adjacent Pixels")
     }
 

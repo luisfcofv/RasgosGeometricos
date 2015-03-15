@@ -16,13 +16,45 @@ class BinaryObject {
     lazy var edges: Int = {
         return self.perimeter + self.contactPerimeter
     }()
+    
+    lazy var tetraPixels: Int = {
+        var tetraPixels = 0
+        for row in 0..<self.rows-1 {
+            for col in 0..<self.columns-1 {
+                if (self.isTetraPixel(Coordinate(x: row, y: col))) {
+                    tetraPixels++
+                }
+            }
+        }
+        
+        return tetraPixels
+    }()
+    
+    lazy var vertex: Int = {
+        //  vertex = 4 * pixels - 2*PC + NT
+        return 4 * self.activePixels - 2 * self.contactPerimeter + self.tetraPixels
+    }()
+    
+    lazy var activePixels: Int = {
+        var numberOfActivePixels = 0
+        
+        for row in 0..<self.rows {
+            for col in 0..<self.columns {
+                if (self.grid[row][col] == 1) {
+                    numberOfActivePixels++
+                }
+            }
+        }
+        
+        return numberOfActivePixels
+    }()
 
     lazy var perimeter: Int = {
         var perimeter = 0
 
         for row in 0..<self.rows {
             for col in 0..<self.columns {
-                perimeter += self.adjacentSpaces(self.grid, coordinate: Coordinate(x: row, y: col))
+                perimeter += self.adjacentSpaces(Coordinate(x: row, y: col))
             }
         }
         
@@ -30,11 +62,8 @@ class BinaryObject {
     }()
     
     lazy var contactPerimeter: Int = {
-        var contactPerimeter = 0
-        let pixels = self.numberOfActivePixels()
-        let valuePerimeter = self.perimeter
         // PC = 2 * N - (P / 2)
-        return (2 * pixels) - (valuePerimeter / 2)
+        return (2 * self.activePixels) - (self.perimeter / 2)
     }()
     
     lazy var centerOfMass:Coordinate = {
@@ -63,21 +92,19 @@ class BinaryObject {
         self.columns = (rows > 0) ? grid[0].count : 0
     }
     
-    func numberOfActivePixels() -> Int {
-        var numberOfActivePixels = 0
-        
-        for row in 0..<rows {
-            for col in 0..<columns {
-                if (grid[row][col] == 1) {
-                    numberOfActivePixels++
+    func isTetraPixel(coordinate:Coordinate) -> Bool {
+        for row in 0..<2 {
+            for col in 0..<2 {
+                if (self.grid[coordinate.x + row][coordinate.y + col] == 0) {
+                    return false
                 }
             }
         }
-        
-        return numberOfActivePixels
+
+        return true
     }
     
-    func adjacentSpaces(grid: [[Int]], coordinate:Coordinate) -> Int {
+    func adjacentSpaces(coordinate:Coordinate) -> Int {
         var spaces = 0
         let row = coordinate.x
         let column = coordinate.y

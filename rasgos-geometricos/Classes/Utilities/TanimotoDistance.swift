@@ -30,7 +30,7 @@ class TanimotoDistance: NSObject {
             }
         }
         
-        var activePixels = objectA.numberOfActivePixels() + objectB.numberOfActivePixels()
+        var activePixels = objectA.activePixels + objectB.activePixels
         return Double(activePixels - 2 * sharedPixels) / Double(activePixels - sharedPixels)
     }
 }
