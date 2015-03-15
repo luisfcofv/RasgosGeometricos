@@ -21,11 +21,8 @@
 		4A37D1241A794956003EF922 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A37D1211A787C4D003EF922 /* Coordinate.swift */; };
 		4A37D1261A794B9F003EF922 /* FloodFillTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A37D1251A794B9F003EF922 /* FloodFillTest.swift */; };
 		4A37D12B1A79BC2C003EF922 /* BinaryObjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A37D12A1A79BC2C003EF922 /* BinaryObjectTest.swift */; };
-		4A37D12D1A79BD77003EF922 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A37D12C1A79BD77003EF922 /* Geometry.swift */; };
-		4A37D12E1A79BD77003EF922 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A37D12C1A79BD77003EF922 /* Geometry.swift */; };
 		4AEAC5201A8111ED000A0747 /* BinaryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC51F1A8111ED000A0747 /* BinaryObject.swift */; };
 		4AEAC5211A8111ED000A0747 /* BinaryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC51F1A8111ED000A0747 /* BinaryObject.swift */; };
-		4AEAC5231A811223000A0747 /* GeometryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAC5221A811223000A0747 /* GeometryTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +51,7 @@
 		4A37D1211A787C4D003EF922 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		4A37D1251A794B9F003EF922 /* FloodFillTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloodFillTest.swift; sourceTree = "<group>"; };
 		4A37D12A1A79BC2C003EF922 /* BinaryObjectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryObjectTest.swift; sourceTree = "<group>"; };
-		4A37D12C1A79BD77003EF922 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		4AEAC51F1A8111ED000A0747 /* BinaryObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryObject.swift; sourceTree = "<group>"; };
-		4AEAC5221A811223000A0747 /* GeometryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +114,6 @@
 			children = (
 				4A37D12A1A79BC2C003EF922 /* BinaryObjectTest.swift */,
 				4A37D1251A794B9F003EF922 /* FloodFillTest.swift */,
-				4AEAC5221A811223000A0747 /* GeometryTest.swift */,
 				4A199B6F1AAB0F5100DBB71B /* TanimotoDistanceTest.swift */,
 				4A37D1021A7873F0003EF922 /* Supporting Files */,
 			);
@@ -190,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				4A37D11E1A78765F003EF922 /* FloodFill.swift */,
-				4A37D12C1A79BD77003EF922 /* Geometry.swift */,
 				4A199B6C1AAB0B9500DBB71B /* TanimotoDistance.swift */,
 			);
 			path = Utilities;
@@ -310,7 +303,6 @@
 				4AEAC5201A8111ED000A0747 /* BinaryObject.swift in Sources */,
 				4A199B6D1AAB0B9500DBB71B /* TanimotoDistance.swift in Sources */,
 				4A37D1151A7874DE003EF922 /* AppDelegate.swift in Sources */,
-				4A37D12D1A79BD77003EF922 /* Geometry.swift in Sources */,
 				4A37D11F1A78765F003EF922 /* FloodFill.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,10 +313,8 @@
 			files = (
 				4A199B701AAB0F5100DBB71B /* TanimotoDistanceTest.swift in Sources */,
 				4A37D1261A794B9F003EF922 /* FloodFillTest.swift in Sources */,
-				4AEAC5231A811223000A0747 /* GeometryTest.swift in Sources */,
 				4A37D1231A794907003EF922 /* FloodFill.swift in Sources */,
 				4AEAC5211A8111ED000A0747 /* BinaryObject.swift in Sources */,
-				4A37D12E1A79BD77003EF922 /* Geometry.swift in Sources */,
 				4A37D12B1A79BC2C003EF922 /* BinaryObjectTest.swift in Sources */,
 				4A37D1241A794956003EF922 /* Coordinate.swift in Sources */,
 				4A199B6E1AAB0F3400DBB71B /* TanimotoDistance.swift in Sources */,
